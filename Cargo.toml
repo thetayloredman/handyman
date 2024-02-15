@@ -3,7 +3,6 @@ name = "handyman"
 version = "0.1.0"
 edition = "2021"
 license = "GPL-3.0"
-license_file = "LICENSE"
 repository = "https://github.com/thetayloredman/handyman"
 keywords = ["utils", "fp"]
 categories = ["utilities"]
@@ -12,3 +11,7 @@ description = "A general utility library for Rust"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+num = "0.4.1"
+
+[package.metadata.docs.rs]
+rustdoc-args = [ "--html-in-header", "katex-doc-header.html" ]
