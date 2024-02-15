@@ -1,5 +1,4 @@
-//! r
-
+#![doc=include_str!("../README.md")]
 #![feature(try_trait_v2)]
 #![feature(non_exhaustive_omitted_patterns_lint)]
 #![warn(
