@@ -12,6 +12,21 @@ use num::{Num, Signed};
 pub struct Vec2D<I>(pub I, pub I);
 
 impl<I> Vec2D<I> {
+    /// Create a [`Vec2D`] $\left[\begin{matrix}x&y\end{matrix}\right]$ from a
+    /// tuple $(x, y)$.
+    ///
+    /// Using the [`Vec2D`] constructor directly (e.g. `Vec2D(1, 2)`) is
+    /// preferred, however if you already have a tuple, this is easier.
+    ///
+    /// ```
+    /// use handyman::math::vector::Vec2D;
+    /// assert_eq!(Vec2D::from_tuple(1, 3), Vec2D(1, 3));
+    /// ```
+    #[must_use]
+    pub fn from_tuple((x, y): (I, I)) -> Self {
+        Self(x, y)
+    }
+
     /// Obtain the $x$ component from a vector
     /// $\left[\begin{matrix}x&y\end{matrix}\right]$
     ///
